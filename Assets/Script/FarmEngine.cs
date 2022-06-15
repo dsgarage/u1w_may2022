@@ -12,6 +12,7 @@ public enum Achievement
     Potatoes,
     Tomato,
     Watermelon,
+    withered,
 }
 
 public class FarmEngine : MonoBehaviour
@@ -52,7 +53,15 @@ public class FarmEngine : MonoBehaviour
 
     public void Destruction()
     {
-        
+        if (rotten)
+        {
+            achievement = Achievement.withered;
+            Init();
+        }
+        else
+        {
+            achievement = Achievement.Seed;
+        }
     }
     
 }
