@@ -27,7 +27,6 @@ public class UITimerSystem : MonoBehaviour
                 time = 0;
                 TimerStop();
                 uiTimerModel.SetTimerValue(time);
-                uiTimerModel.TimerComplete();
             }
             else
             {
@@ -43,5 +42,11 @@ public class UITimerSystem : MonoBehaviour
     public void TimerStart()
     {
         isTimerOn = true;
+    }
+
+    public void TimerInit()
+    {
+        time = maxTime;
+        uiTimerModel.SetTimerValue(time);
     }
 }

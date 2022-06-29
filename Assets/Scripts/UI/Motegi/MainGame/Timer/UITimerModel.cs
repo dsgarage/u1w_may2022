@@ -19,10 +19,9 @@ public class UITimerModel : MonoBehaviour
         time.Value = value;
     }
 
-    public void TimerComplete()
+    public void Dispose()
     {
         time.Dispose();
     }
-
 
 }

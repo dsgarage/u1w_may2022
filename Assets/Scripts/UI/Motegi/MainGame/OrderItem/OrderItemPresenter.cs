@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UniRx;
@@ -7,9 +8,15 @@ public class OrderItemPresenter : MonoBehaviour
 {
     [SerializeField] private OrderItemViewController orderItemViewController;
     [SerializeField] private OrderItemModel orderItemModel;
+
+    private void Awake()
+    {
+        orderItemModel.SetCollectionLength(orderItemViewController.GetImageListLength());
+        orderItemModel.InitItemCollection();
+    }
+
     void Start()
     {
-        orderItemModel.InitItemCollection(orderItemViewController.GetImageListLength());
         List<OrderItem> items = orderItemModel.GetOrderItems();
         for (int i = 0; i < items.Count; i++)
         {
