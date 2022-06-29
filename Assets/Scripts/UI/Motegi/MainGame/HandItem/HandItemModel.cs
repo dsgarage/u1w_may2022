@@ -16,6 +16,7 @@ public class HandItemModel : MonoBehaviour
 {
     public IReadOnlyReactiveCollection<UIItemKind> r_handKinds => handItems;
     private readonly ReactiveCollection<UIItemKind> handItems = new ReactiveCollection<UIItemKind>();
+    int collectionLength = 0;
 
     void Start()
     {
@@ -32,11 +33,24 @@ public class HandItemModel : MonoBehaviour
         return handItems[num];
     }
 
-    public void InitItemCollection(int num)
+    public void SetCollectionLength(int length)
     {
-        for (int i = 0; i < num; i++)
+        collectionLength = length;
+    }
+
+    public void InitItemCollection()
+    {
+        for (int i = 0; i < collectionLength; i++)
         {
             handItems.Add(UIItemKind.None);
+        }
+    }
+
+    public void Init()
+    {
+        for (int i = 0; i < handItems.Count; i++)
+        {
+            handItems[i] = UIItemKind.None;
         }
     }
 }

@@ -22,4 +22,9 @@ public class ResultScoreModel : MonoBehaviour
     {
         score.Dispose();
     }
+
+    public void Init()
+    {
+        score.Value = 0;
+    }
 }

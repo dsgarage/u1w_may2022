@@ -26,4 +26,9 @@ public class ResultStarModel : MonoBehaviour
     {
         stars.Dispose();
     }
+
+    public void Init()
+    {
+        stars.Value = 0;
+    }
 }

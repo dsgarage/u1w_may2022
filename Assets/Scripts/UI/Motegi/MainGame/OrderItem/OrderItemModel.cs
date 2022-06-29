@@ -11,7 +11,6 @@ public class OrderItem
     public IReadOnlyReactiveProperty<UIItemKind> r_kind => kind;
     private readonly ReactiveProperty<UIItemKind> kind = new ReactiveProperty<UIItemKind>(UIItemKind.None);
 
-    
     public OrderItem(UIItemKind kind,int value)
     {
         this.kind.Value = kind;
@@ -47,6 +46,7 @@ public class OrderItemModel : MonoBehaviour
 {
 
     private List<OrderItem> orderItems = new List<OrderItem>();
+    int collectionLength = 0;
 
     public OrderItem GetOrderItem(int num)
     {
@@ -57,14 +57,27 @@ public class OrderItemModel : MonoBehaviour
     {
         return orderItems;
     }
-    public void InitItemCollection(int num)
+    public void SetCollectionLength(int length)
     {
-        for (int i = 0; i < num; i++)
+        collectionLength = length;
+    }
+
+    public void InitItemCollection()
+    {
+        for (int i = 0; i < collectionLength; i++)
         {
             orderItems.Add(new OrderItem(UIItemKind.None,i));
         }
     }
 
+    public void Init()
+    {
+        for (int i = 0; i < orderItems.Count; i++)
+        {
+            orderItems[i].SetKind(UIItemKind.None);
+            orderItems[i].SetValue(0);
+        }
+    }
 
     private void OnDestroy()
     {
