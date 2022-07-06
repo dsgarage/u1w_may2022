@@ -4,28 +4,28 @@ using UnityEngine;
 
 public class UIIniter : MonoBehaviour
 {
-    [SerializeField] private CountDownModel countDownModel;
+    [SerializeField] private CountDownModelPresenter countDownModelPresenter;
     [SerializeField] private UITimerSystem uiTimerSystem;
-    [SerializeField] private HandItemModel handItemModel;
-    [SerializeField] private OrderItemModel orderItemModel;
-    [SerializeField] private ResultScoreModel resultScoreModel;
-    [SerializeField] private ResultStarModel resultStarModel;
+    [SerializeField] private HandItemModelPresenter handItemModelPresenter;
+    [SerializeField] private OrderItemModelPresenter orderItemModelPresenter;
+    [SerializeField] private ResultScoreModelPresenter resultScoreModelPresenter;
+    [SerializeField] private ResultStarModelPresenter resultStarModelPresenter;
 
     public void CountDownInit()
     {
-        countDownModel.Init();
+        countDownModelPresenter.Init();
     }
 
     public void MainPanelInit()
     {
         uiTimerSystem.TimerInit();
-        handItemModel.Init();
-        orderItemModel.Init();
+        handItemModelPresenter.Init();
+        orderItemModelPresenter.Init();
     }
 
     public void ResultInit()
     {
-        resultStarModel.Init();
-        resultScoreModel.Init();
+        resultStarModelPresenter.Init();
+        resultScoreModelPresenter.Init();
     }
 }

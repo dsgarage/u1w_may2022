@@ -14,6 +14,7 @@ public class CountDownSystem : MonoBehaviour
         for (int i = countDownCount; i >= 0; i--)
         {
             yield return new WaitForSeconds(1);
+            if(i == 0)yield break;
             countDownModelPresenter.SetCountDownValue(i - 1);
         }
         yield break;

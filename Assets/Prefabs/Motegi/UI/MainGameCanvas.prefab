@@ -435,6 +435,7 @@ GameObject:
   - component: {fileID: 5903188684804203276}
   - component: {fileID: 5903188684804203275}
   - component: {fileID: 5903188684804203277}
+  - component: {fileID: 9050668604255914291}
   m_Layer: 5
   m_Name: HandItem
   m_TagString: Untagged
@@ -504,6 +505,19 @@ MonoBehaviour:
   - {fileID: 5903188685119075519}
   - {fileID: 5903188686258709685}
   - {fileID: 5903188685267511175}
+--- !u!114 &9050668604255914291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5903188684804203271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e985a870b84ceb14aa436b3ef20a295e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handItemModel: {fileID: 5903188684804203276}
 --- !u!1 &5903188684885201298
 GameObject:
   m_ObjectHideFlags: 0
@@ -2427,6 +2441,7 @@ GameObject:
   - component: {fileID: 5903188686217165570}
   - component: {fileID: 5903188686217165569}
   - component: {fileID: 5903188686217165568}
+  - component: {fileID: 4996555616138187217}
   m_Layer: 5
   m_Name: OrderItem
   m_TagString: Untagged
@@ -2502,6 +2517,19 @@ MonoBehaviour:
   - {fileID: 5903188684637866419}
   - {fileID: 5903188685554439600}
   - {fileID: 5903188686291337688}
+--- !u!114 &4996555616138187217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5903188686217165598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff5d21df7ce1dc4382835d258761bda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderItemModel: {fileID: 5903188686217165570}
 --- !u!1 &5903188686258709681
 GameObject:
   m_ObjectHideFlags: 0
@@ -2835,6 +2863,7 @@ GameObject:
   - component: {fileID: 5903188686480502325}
   - component: {fileID: 5903188686480502324}
   - component: {fileID: 5903188686480502327}
+  - component: {fileID: 234051258508006581}
   m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged
@@ -2913,9 +2942,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5991657c91ff882409a1413dd7f70086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiTimerModel: {fileID: 5903188686480502326}
+  uiTimerModelPresenter: {fileID: 234051258508006581}
   maxTime: 10
   isTimerOn: 0
+--- !u!114 &234051258508006581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5903188686480502322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c8b99810371af4e87fbe17d0bd66d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiTimerModel: {fileID: 5903188686480502326}
 --- !u!1 &5923778642369292396
 GameObject:
   m_ObjectHideFlags: 0
@@ -3003,6 +3045,7 @@ GameObject:
   - component: {fileID: 7803848706017464829}
   - component: {fileID: 2250101439931168114}
   - component: {fileID: 130445744692988299}
+  - component: {fileID: 3908871488229894897}
   m_Layer: 5
   m_Name: CountDown
   m_TagString: Untagged
@@ -3068,7 +3111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8c53e78d08fef6438ac9b676e7c9b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countDownModel: {fileID: 5200678094627941662}
+  countDownModelPresenter: {fileID: 3908871488229894897}
   countDownCount: 5
 --- !u!114 &130445744692988299
 MonoBehaviour:
@@ -3083,6 +3126,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countDownTextView: {fileID: 1931235944434610275}
+--- !u!114 &3908871488229894897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7610792063329210748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 283e975f4a82bcc409558cdce572c95b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countDownModel: {fileID: 5200678094627941662}
 --- !u!1 &8142171405460500676
 GameObject:
   m_ObjectHideFlags: 0
