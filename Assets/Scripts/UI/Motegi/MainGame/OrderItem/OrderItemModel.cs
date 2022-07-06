@@ -61,7 +61,6 @@ public class OrderItemModel : MonoBehaviour
     {
         collectionLength = length;
     }
-
     public void InitItemCollection()
     {
         for (int i = 0; i < collectionLength; i++)

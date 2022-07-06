@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UniRx;
 using UnityEngine;
 
-public class OrderItemPresenter : MonoBehaviour
+public class OrderItemViewPresenter : MonoBehaviour
 {
     [SerializeField] private OrderItemViewController orderItemViewController;
     [SerializeField] private OrderItemModel orderItemModel;
