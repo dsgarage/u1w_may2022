@@ -28,15 +28,16 @@ public class PlayercontrollerMouseRotateControlle : MonoBehaviour
 
     void Update () {
 
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyUp(KeyCode.A))
         {
-            anim.SetBool("blanim", true);
+            anim.SetBool("blanim",true);
         }
-        else if (Input.GetKeyUp(KeyCode.W))
+        else if(Input.GetKeyUp(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyUp(KeyCode.A))
         {
-            anim.SetBool("blanim", false);
+            anim.SetBool("blanim",false);
         }
-        else if (Input.GetKeyDown(KeyCode.S))
+
+        /*else if (Input.GetKeyDown(KeyCode.S))
         {
             //transform.Rotate(new Vector3(0, -180, 0));
             anim.SetBool("blanim", true);
@@ -62,7 +63,8 @@ public class PlayercontrollerMouseRotateControlle : MonoBehaviour
         else if (Input.GetKeyUp(KeyCode.A))
         {
             anim.SetBool("blanim", false);
-        }
+        }*/
+
 
 
 
