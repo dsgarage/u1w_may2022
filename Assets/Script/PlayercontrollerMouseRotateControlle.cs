@@ -36,6 +36,36 @@ public class PlayercontrollerMouseRotateControlle : MonoBehaviour
         {
             anim.SetBool("blanim", false);
         }
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            //transform.Rotate(new Vector3(0, -180, 0));
+            anim.SetBool("blanim", true);
+        }
+        else if (Input.GetKeyUp(KeyCode.S))
+        {
+            anim.SetBool("blanim", false);
+        }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            //transform.Rotate(new Vector3(0, 90, 0));
+            anim.SetBool("blanim", true);
+        }
+        else if (Input.GetKeyUp(KeyCode.D))
+        {
+            anim.SetBool("blanim", false);
+        }
+        else if (Input.GetKeyDown(KeyCode.A))
+        {
+            //transform.Rotate(new Vector3(0, -90, 0));
+            anim.SetBool("blanim", true);
+        }
+        else if (Input.GetKeyUp(KeyCode.A))
+        {
+            anim.SetBool("blanim", false);
+        }
+
+
+
 
         _moveHorizon = Input.GetAxis ("Horizontal");    //左右矢印キーの値(-1.0~1.0)
         _moveVertical = Input.GetAxis ("Vertical");      //上下矢印キーの値(-1.0~1.0)
@@ -52,6 +82,7 @@ public class PlayercontrollerMouseRotateControlle : MonoBehaviour
         
         moveDirection.y -= gravity * Time.deltaTime;
         controller.Move(moveDirection * Time.deltaTime);
+        
 
 
 
