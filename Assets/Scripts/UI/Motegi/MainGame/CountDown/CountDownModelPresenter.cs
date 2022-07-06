@@ -17,4 +17,8 @@ public class CountDownModelPresenter : MonoBehaviour
             Debug.LogError(this + "範囲外の値をセットしようとしています！");
         }
     }
+    public void Init()
+    {
+        countDownModel.SetValue(999);
+    }
 }

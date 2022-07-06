@@ -6,7 +6,7 @@ using UnityEngine;
 public class CountDownModel : MonoBehaviour
 {
     public IReadOnlyReactiveProperty<int> r_value => value;
-    private readonly IntReactiveProperty value = new IntReactiveProperty(-1);
+    private readonly IntReactiveProperty value = new IntReactiveProperty(999);
     void Start()
     {
         value.AddTo(this);
@@ -17,8 +17,5 @@ public class CountDownModel : MonoBehaviour
         this.value.Value = value;
     }
 
-    public void Init()
-    {
-        value.Value = -1;
-    }
+
 }

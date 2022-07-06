@@ -29,4 +29,14 @@ public class OrderItemModelPresenter : MonoBehaviour
             Debug.LogError(this + "範囲外の値をセットしようとしています！");
         }
     }
+
+    public void Init()
+    {
+        for (int i = 0; i < orderItemModel.GetOrderItems().Count; i++)
+        {
+            orderItemModel.GetOrderItem(i).SetKind(UIItemKind.None);
+            orderItemModel.GetOrderItem(i).SetValue(0);
+        }
+    }
+
 }

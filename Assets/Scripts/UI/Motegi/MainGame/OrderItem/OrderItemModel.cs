@@ -69,15 +69,6 @@ public class OrderItemModel : MonoBehaviour
         }
     }
 
-    public void Init()
-    {
-        for (int i = 0; i < orderItems.Count; i++)
-        {
-            orderItems[i].SetKind(UIItemKind.None);
-            orderItems[i].SetValue(0);
-        }
-    }
-
     private void OnDestroy()
     {
         foreach (var value in orderItems)

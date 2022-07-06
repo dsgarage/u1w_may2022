@@ -16,4 +16,8 @@ public class ResultStarModelPresenter : MonoBehaviour
             Debug.LogError(this + "範囲外の値をセットしようとしています！");
         }
     }
+    public void Init()
+    {
+        resultStarModel.SetStars(0);
+    }
 }

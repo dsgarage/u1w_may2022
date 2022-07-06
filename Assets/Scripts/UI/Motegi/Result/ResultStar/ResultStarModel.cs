@@ -17,8 +17,4 @@ public class ResultStarModel : MonoBehaviour
         stars.Value = value;
     }
 
-    public void Init()
-    {
-        stars.Value = 0;
-    }
 }

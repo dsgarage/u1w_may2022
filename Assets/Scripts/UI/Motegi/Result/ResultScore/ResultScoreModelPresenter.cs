@@ -16,4 +16,8 @@ public class ResultScoreModelPresenter : MonoBehaviour
             Debug.LogError(this + "範囲外の値をセットしようとしています！");
         }
     }
+    public void Init()
+    {
+        resultScoreModel.SetScore(0);
+    }
 }

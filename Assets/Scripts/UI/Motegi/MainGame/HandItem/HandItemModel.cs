@@ -51,11 +51,4 @@ public class HandItemModel : MonoBehaviour
         }
     }
 
-    public void Init()
-    {
-        for (int i = 0; i < handItems.Count; i++)
-        {
-            handItems[i] = UIItemKind.None;
-        }
-    }
 }

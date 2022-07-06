@@ -15,8 +15,7 @@ public class UITimerSystem : MonoBehaviour
         time = maxTime;
         uiTimerModelPresenter.SetUITimerValue(time);
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (isTimerOn)

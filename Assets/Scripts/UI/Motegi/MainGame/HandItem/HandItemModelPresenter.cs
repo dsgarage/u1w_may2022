@@ -17,4 +17,11 @@ public class HandItemModelPresenter : MonoBehaviour
             Debug.LogError(this + "範囲外の値をセットしようとしています！");
         }
     }
+    public void Init()
+    {
+        for (int i = 0; i < handItemModel.GetHandItemsCount(); i++)
+        {
+            handItemModel.SetHandItem(i,UIItemKind.None);
+        }
+    }
 }

@@ -19,8 +19,4 @@ public class ResultScoreModel : MonoBehaviour
         score.Value = value;
     }
 
-    public void Init()
-    {
-        score.Value = 0;
-    }
 }
