@@ -8,7 +8,7 @@ public class OrderItemModelPresenter : MonoBehaviour
 
     public void SetOrderItemNumValue(int orderItemIndex,int num)
     {
-        if (orderItemIndex > 0 && orderItemIndex < orderItemModel.GetOrderItems().Count)
+        if (orderItemIndex >= 0 && orderItemIndex < orderItemModel.GetOrderItems().Count)
         {
             orderItemModel.GetOrderItem(orderItemIndex).SetValue(num);
         }
@@ -20,7 +20,7 @@ public class OrderItemModelPresenter : MonoBehaviour
 
     public void SetOrderItemKindValue(int orderItemIndex, UIItemKind kind)
     {
-        if (orderItemIndex > 0 && orderItemIndex < orderItemModel.GetOrderItems().Count)
+        if (orderItemIndex >= 0 && orderItemIndex < orderItemModel.GetOrderItems().Count)
         {
             orderItemModel.GetOrderItem(orderItemIndex).SetKind(kind);
         }

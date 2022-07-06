@@ -23,14 +23,19 @@ public class HandItemModel : MonoBehaviour
         handItems.AddTo(this);
     }
 
-    public void SetHandItems(int num,UIItemKind kind)
+    public void SetHandItem(int num,UIItemKind kind)
     {
         handItems[num] = kind;
     }
 
-    public UIItemKind GetHandItems(int num)
+    public UIItemKind GetHandItem(int num)
     {
         return handItems[num];
+    }
+
+    public int GetHandItemsCount()
+    {
+        return handItems.Count;
     }
 
     public void SetCollectionLength(int length)

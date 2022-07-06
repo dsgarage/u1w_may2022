@@ -5,7 +5,7 @@ using UnityEngine;
 public class HandItemDebug : MonoBehaviour
 {
     [SerializeField]
-    private HandItemModel handItemModel;
+    private HandItemModelPresenter handItemModelPresenter;
     [SerializeField] private GameObject panelObj;
     [SerializeField] private UIItemKind[] itemKinds;
     
@@ -15,7 +15,7 @@ public class HandItemDebug : MonoBehaviour
         {
             for (int i = 0; i < itemKinds.Length; i++)
             {
-                handItemModel.SetHandItems(i, itemKinds[i]);
+                handItemModelPresenter.SetHandItemValue(i,itemKinds[i]);
             }
         }
     }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UniRx;
 using UnityEngine;
 
-public class HandItemPresenter : MonoBehaviour
+public class HandItemViewPresenter : MonoBehaviour
 {
     [SerializeField] private HandItemModel handItemModel;
     [SerializeField] private HandItemViewController handItemViewController;

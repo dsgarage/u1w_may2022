@@ -5,16 +5,16 @@ using UnityEngine;
 
 public class CountDownSystem : MonoBehaviour
 {
-    [SerializeField] private CountDownModel countDownModel;
+    [SerializeField] private CountDownModelPresenter countDownModelPresenter;
     [SerializeField] private int countDownCount;
 
     public IEnumerator CountDownStart()
     {
-        countDownModel.SetValue(countDownCount);
+        countDownModelPresenter.SetCountDownValue(countDownCount);
         for (int i = countDownCount; i >= 0; i--)
         {
             yield return new WaitForSeconds(1);
-            countDownModel.SetValue(i - 1);
+            countDownModelPresenter.SetCountDownValue(i - 1);
         }
         yield break;
     }

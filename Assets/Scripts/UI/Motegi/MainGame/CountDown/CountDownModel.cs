@@ -17,16 +17,6 @@ public class CountDownModel : MonoBehaviour
         this.value.Value = value;
     }
 
-    public int GetValue()
-    {
-        return value.Value;
-    }
-
-    public void Dispose()
-    {
-        value.Dispose();
-    }
-
     public void Init()
     {
         value.Value = -1;
