@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class UITimerSystem : MonoBehaviour
 {
-    [SerializeField] private UITimerModel uiTimerModel;
+    [SerializeField] private UITimerModelPresenter uiTimerModelPresenter;
     [SerializeField] private float maxTime = 60;
     [SerializeField] private bool isTimerOn = false;
     private float time = 0;
@@ -13,7 +13,7 @@ public class UITimerSystem : MonoBehaviour
     private void Awake()
     {
         time = maxTime;
-        uiTimerModel.SetTimerValue(time);
+        uiTimerModelPresenter.SetUITimerValue(time);
     }
 
     // Update is called once per frame
@@ -26,11 +26,11 @@ public class UITimerSystem : MonoBehaviour
             {
                 time = 0;
                 TimerStop();
-                uiTimerModel.SetTimerValue(time);
+                uiTimerModelPresenter.SetUITimerValue(time);
             }
             else
             {
-                uiTimerModel.SetTimerValue(time);
+                uiTimerModelPresenter.SetUITimerValue(time);
             }
         }
     }
@@ -47,6 +47,6 @@ public class UITimerSystem : MonoBehaviour
     public void TimerInit()
     {
         time = maxTime;
-        uiTimerModel.SetTimerValue(time);
+        uiTimerModelPresenter.SetUITimerValue(time);
     }
 }

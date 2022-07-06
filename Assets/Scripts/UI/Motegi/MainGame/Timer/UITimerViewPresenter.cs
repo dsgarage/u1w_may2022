@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 
-public class UITimerPresenter : MonoBehaviour
+public class UITimerViewPresenter : MonoBehaviour
 {
     [SerializeField] private UITimerView uiTimerView;
     [SerializeField] private UITimerModel uiTimerModel;

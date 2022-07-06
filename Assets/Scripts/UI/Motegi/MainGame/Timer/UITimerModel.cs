@@ -18,10 +18,4 @@ public class UITimerModel : MonoBehaviour
     {
         time.Value = value;
     }
-
-    public void Dispose()
-    {
-        time.Dispose();
-    }
-
 }
