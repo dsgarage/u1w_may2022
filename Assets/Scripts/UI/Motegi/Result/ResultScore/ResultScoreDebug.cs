@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class ResultScoreDebug : MonoBehaviour
 {
-    [SerializeField] private ResultScoreModel resultScoreModel;
+    [SerializeField] private ResultScoreModelPresenter resultScoreModelPresenter;
     [SerializeField] private int score;
     void Update()
     {
-        resultScoreModel.SetScore(score);
+        resultScoreModelPresenter.SetResultScoreValue(score);
     }
 }

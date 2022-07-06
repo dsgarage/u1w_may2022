@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UniRx;
 using UnityEngine;
 
-public class ResultScorePresenter : MonoBehaviour
+public class ResultScoreViewPresenter : MonoBehaviour
 {
     [SerializeField] private ResultScoreModel resultScoreModel;
     [SerializeField] private ResultScoreViewController resultScoreViewController;
