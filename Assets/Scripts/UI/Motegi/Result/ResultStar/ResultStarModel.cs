@@ -17,16 +17,6 @@ public class ResultStarModel : MonoBehaviour
         stars.Value = value;
     }
 
-    public int GetStars()
-    {
-        return stars.Value;
-    }
-
-    public void Dispose()
-    {
-        stars.Dispose();
-    }
-
     public void Init()
     {
         stars.Value = 0;

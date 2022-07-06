@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UniRx;
 using UnityEngine;
 
-public class ResultStarPresenter : MonoBehaviour
+public class ResultStarViewPresenter : MonoBehaviour
 {
     [SerializeField] private ResultStarViewController resultStarViewController;
     [SerializeField] private ResultStarModel resultStarModel;
