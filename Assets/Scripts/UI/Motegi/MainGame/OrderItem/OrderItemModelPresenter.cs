@@ -12,6 +12,10 @@ public class OrderItemModelPresenter : MonoBehaviour
         {
             orderItemModel.GetOrderItem(orderItemIndex).SetValue(num);
         }
+        else
+        {
+            Debug.LogError(this + "範囲外の値をセットしようとしています！");
+        }
     }
 
     public void SetOrderItemKindValue(int orderItemIndex, UIItemKind kind)
@@ -19,6 +23,10 @@ public class OrderItemModelPresenter : MonoBehaviour
         if (orderItemIndex > 0 && orderItemIndex < orderItemModel.GetOrderItems().Count)
         {
             orderItemModel.GetOrderItem(orderItemIndex).SetKind(kind);
+        }
+        else
+        {
+            Debug.LogError(this + "範囲外の値をセットしようとしています！");
         }
     }
 }
