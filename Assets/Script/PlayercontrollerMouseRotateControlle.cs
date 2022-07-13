@@ -28,15 +28,6 @@ public class PlayercontrollerMouseRotateControlle : MonoBehaviour
 
     void Update () {
 
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyUp(KeyCode.A))
-        {
-            anim.SetBool("blanim",true);
-        }
-        else if(Input.GetKeyUp(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyUp(KeyCode.A))
-        {
-            anim.SetBool("blanim",false);
-        }
-
         /*else if (Input.GetKeyDown(KeyCode.S))
         {
             //transform.Rotate(new Vector3(0, -180, 0));
@@ -72,6 +63,21 @@ public class PlayercontrollerMouseRotateControlle : MonoBehaviour
         _moveHorizon = Input.GetAxis ("Horizontal");    //左右矢印キーの値(-1.0~1.0)
         _moveVertical = Input.GetAxis ("Vertical");      //上下矢印キーの値(-1.0~1.0)
         _mouseX = Input.GetAxis ("Mouse X");      //マウスの左右移動量(-1.0~1.0)
+
+
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyUp(KeyCode.A))
+        {
+            anim.SetBool("blanim", true);
+        }
+        else if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyUp(KeyCode.A))
+        {
+            anim.SetBool("blanim", false);
+        }
+
+
+
+
+
 
         //キャラクターの移動を回転
         if (controller.isGrounded) {
