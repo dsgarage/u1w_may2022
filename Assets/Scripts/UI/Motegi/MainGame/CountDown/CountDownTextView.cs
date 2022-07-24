@@ -11,4 +11,5 @@ public class CountDownTextView : MonoBehaviour
     {
         text.text = value.ToString();
     }
+
 }
